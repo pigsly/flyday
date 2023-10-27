@@ -1,0 +1,3 @@
+download/*.csv
+upload/*.csv
+.DS_Store
