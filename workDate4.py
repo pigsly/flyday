@@ -4,10 +4,10 @@ import random
 from datetime import datetime
 import json
 
-with open('projects.json', 'r', encoding='utf-8') as f:
+with open('conf/projects.json', 'r', encoding='utf-8') as f:
     projects = json.load(f)
 
-with open('project_tasks.json', 'r', encoding='utf-8') as f:
+with open('conf/project_tasks.json', 'r', encoding='utf-8') as f:
     task_categories = json.load(f)
 
 # Ask user for date
@@ -15,10 +15,19 @@ sample_date = input("請輸入日期（MM/dd）：")
 
 # Create a unique CSV file path with current time
 current_time = datetime.now().strftime("%Y%m%d%H%M%S")
-input_csv_path = 'upload/uploaded_work_schedule.csv'
-output_csv_path = f'download/downloaded_work_schedule_{current_time}.csv'
+input_csv_path = 'history/uploaded_work_schedule.csv'
+output_csv_path = f'csv/downloaded_work_schedule_{current_time}.csv'
 csv_headers = ['DATE(MM/DD)','PROJECTNAME', 'ID', '項目詞彙', '工作時數']
 
+
+'''
+date: 輸入的日期。
+projects: 從 projects.json 讀取的項目列表。
+task_categories: 從 project_tasks.json 讀取的任務類別。
+completed_tasks: 已完成的任務和對應的總工時。
+output_csv_path: 輸出 CSV 文件的路徑。
+max_work_hours: 一天中可分配的最大工作時數。
+'''
 def initialize_csv():
     with open(output_csv_path, mode='w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)

@@ -3,7 +3,7 @@ import random
 from datetime import datetime
 import json
 
-with open('projects.json', 'r', encoding='utf-8') as f:
+with open('conf/projects.json', 'r', encoding='utf-8') as f:
     projects = json.load(f)
 
 # Initialize completed_tasks dictionary
@@ -51,7 +51,7 @@ def update_priority_based_on_remaining_hours(projects, completed_tasks):
 updated_projects = update_priority_based_on_remaining_hours(projects, completed_tasks)
 
 # Save the updated projects back to projects.json
-with open('projects.json', 'w', encoding='utf-8') as f:
+with open('conf/projects.json', 'w', encoding='utf-8') as f:
     json.dump(updated_projects, f, ensure_ascii=False, indent=4)
 
 # Display the updated projects for verification
