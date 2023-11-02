@@ -3,8 +3,6 @@ import random
 from datetime import datetime
 import json
 
-input_csv_path = 'history/uploaded_work_schedule.csv'
-
 with open('conf/projects.json', 'r', encoding='utf-8') as f:
     projects = json.load(f)
 
@@ -13,7 +11,7 @@ completed_tasks = {}
 
 # Read completed tasks from the uploaded_work_schedule.csv file
 def read_completed_tasks_from_csv():
-    with open(input_csv_path, mode='r', newline='', encoding='utf-8') as f:
+    with open('history/uploaded_work_schedule.csv', mode='r', newline='', encoding='utf-8') as f:
         reader = csv.reader(f)
         next(reader)  # Skip header row
         for row in reader:
@@ -59,33 +57,4 @@ with open('conf/projects.json', 'w', encoding='utf-8') as f:
     json.dump(updated_projects, f, ensure_ascii=False, indent=4)
 
 # Display the updated projects for verification
-# print(updated_projects)
-
-
-# Your function to print remaining work hours
-def print_remaining_hours():
-    for project_details in projects:
-        project_id = project_details['id']
-        remaining_hours = project_details['total_hours']
-        for task in completed_tasks.get(project_id, []):
-            remaining_hours -= task['hours']
-        print(f"{project_id} ({project_details['name']})({project_details['priority']}) - 剩餘工時：{remaining_hours} 小時")
-
-
-def total_remaining_hours():
-    total_hours = 0
-    for project_details in projects:
-        project_id = project_details['id']
-        remaining_hours = project_details['total_hours']
-        for task in completed_tasks.get(project_id, []):
-            remaining_hours -= task['hours']
-        total_hours += remaining_hours
-    return total_hours
-
-# Print remaining work hours for each project
-print_remaining_hours()
-
-print(f"**所有專案總剩餘工時：{total_remaining_hours()} 小時**")
-
-# Here follows the rest of your code
-# ... (your projects, project_tasks, initialize_csv, and generate_priority_work_schedule functions)
+print(updated_projects)
