@@ -1,28 +1,30 @@
 from cx_Freeze import setup, Executable
 
-exe1 = Executable(
-    script="workDate4.py",
-    target_name="migrate.exe"
-)
+# Define executables
+executables = [
+    Executable("project_module/migrate.py", target_name="migrate.exe"),
+    Executable("project_module/info.py", target_name="info.exe"),
+    Executable("project_module/repair.py", target_name="repair.exe"),
+    Executable("project_module/undo.py", target_name="undo.exe")
+]
 
-exe2 = Executable(
-    script="read_completed_tasks_from_csv3.py",
-    target_name="info.exe"
-)
+# Define package data to include
+includefiles = [
+    ('conf/projects.json','conf/projects.json'), 
+    ('conf/projects_tasks.json','conf/projects_tasks.json'),
+    ('csv/V20231102144211__DAY.csv','csv/V20231102144211__DAY.csv'),
+    ('history/Schedule.csv','history/Schedule.csv')
+]
 
-exe3 = Executable(
-    script="repair.py",
-    target_name="repair.exe"
-)
-
-exe4 = Executable(
-    script="undo.py",
-    target_name="undo.exe"
-)
 
 setup(
-    name = "Daily Task Generator",
-    version = "1.0",
-    description = "create tasks a Day",    
-    executables =[exe1,exe2,exe3,exe4]
-)    
+    name="flyday",
+    version="1.0",
+    description="Create tasks a day",
+    executables=executables,
+    options={
+        'build_exe': {            
+            'include_files':includefiles
+        }
+    }
+)

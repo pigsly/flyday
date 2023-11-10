@@ -3,7 +3,7 @@ import random
 from datetime import datetime
 import json
 
-input_csv_path = 'history/uploaded_work_schedule.csv'
+input_csv_path = 'history/Schedule.csv'
 
 with open('conf/projects.json', 'r', encoding='utf-8') as f:
     projects = json.load(f)
@@ -30,6 +30,7 @@ read_completed_tasks_from_csv()
 
 # print(completed_tasks)
 
+
 # Function to update the priority of projects based on remaining_hours
 def update_priority_based_on_remaining_hours(projects, completed_tasks):
     # Calculate remaining_hours for each project
@@ -50,9 +51,11 @@ def update_priority_based_on_remaining_hours(projects, completed_tasks):
     return projects
 
 
+
 # Assuming 'projects' and 'completed_tasks' are already defined and populated
 # Update the priority and sort the projects
 updated_projects = update_priority_based_on_remaining_hours(projects, completed_tasks)
+
 
 # Save the updated projects back to projects.json
 with open('conf/projects.json', 'w', encoding='utf-8') as f:

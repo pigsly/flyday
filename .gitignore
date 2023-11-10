@@ -1,4 +1,8 @@
-download/*.csv
-upload/*.csv
+csv/*.csv
 .DS_Store
 build/
+venv/
+*.pyc
+requirements.txt
+*_bak.*
+*_backup.*

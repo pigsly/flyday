@@ -1,19 +1,19 @@
 [
     {
-        "id": "P20230073_01",
-        "name": "偉全企業SCM維護專案",
-        "type": "維運類",
-        "total_hours": 8,
+        "id": "N20230466_01",
+        "name": "中科院SCM會員模組加入董監事、採購員",
+        "type": "專案類",
+        "total_hours": 40,
         "priority": 1,
-        "remaining_hours": 4
+        "remaining_hours": 40
     },
     {
-        "id": "P20230012_02",
-        "name": "電子發票載具平台開獎訊息調整",
+        "id": "P20230012_01",
+        "name": "電子發票載具平台中獎訊息調整",
         "type": "專案類",
-        "total_hours": 20,
+        "total_hours": 30,
         "priority": 2,
-        "remaining_hours": 3
+        "remaining_hours": 21
     },
     {
         "id": "N20230466_02",
@@ -21,30 +21,30 @@
         "type": "專案類",
         "total_hours": 20,
         "priority": 3,
-        "remaining_hours": 1
+        "remaining_hours": 20
     },
     {
-        "id": "P20230012_01",
-        "name": "電子發票載具平台中獎訊息調整",
+        "id": "P20230012_02",
+        "name": "電子發票載具平台開獎訊息調整",
         "type": "專案類",
-        "total_hours": 30,
+        "total_hours": 20,
         "priority": 4,
-        "remaining_hours": 0
+        "remaining_hours": 17
+    },
+    {
+        "id": "P20230073_01",
+        "name": "偉全企業SCM維護專案",
+        "type": "維運類",
+        "total_hours": 8,
+        "priority": 5,
+        "remaining_hours": 4
     },
     {
         "id": "P20220350_01",
         "name": "遠時電子發票專案",
         "type": "遠時維運類",
         "total_hours": 2,
-        "priority": 5,
-        "remaining_hours": 0
-    },
-    {
-        "id": "N20230466_01",
-        "name": "中科院SCM會員模組加入董監事、採購員",
-        "type": "專案類",
-        "total_hours": 40,
         "priority": 6,
-        "remaining_hours": 0
+        "remaining_hours": 2
     }
 ]

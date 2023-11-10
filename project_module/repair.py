@@ -3,15 +3,17 @@ import random
 from datetime import datetime
 import json
 
+input_csv_path = 'history/Schedule.csv'
+
 with open('conf/projects.json', 'r', encoding='utf-8') as f:
     projects = json.load(f)
 
 # Initialize completed_tasks dictionary
 completed_tasks = {}
 
-# Read completed tasks from the uploaded_work_schedule.csv file
+# Read completed tasks from the Schedule.csv file
 def read_completed_tasks_from_csv():
-    with open('history/uploaded_work_schedule.csv', mode='r', newline='', encoding='utf-8') as f:
+    with open(input_csv_path, mode='r', newline='', encoding='utf-8') as f:
         reader = csv.reader(f)
         next(reader)  # Skip header row
         for row in reader:

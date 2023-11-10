@@ -25,5 +25,5 @@ def undo(input_csv_path):
         writer.writerow(header)
         writer.writerows(filtered_rows)
 
-input_csv_path = 'history/uploaded_work_schedule.csv'
+input_csv_path = 'history/Schedule.csv'
 undo(input_csv_path)
