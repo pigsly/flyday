@@ -27,6 +27,18 @@ class ConfigManager:
     def flyday_config(self):
         return self.config.get('flyday')
 
+    def update_alternating_flag(self, new_value):
+        # 更新 alternating_flag
+        self.config['flyday']['alternating_flag'] = new_value
+        # 保存配置變更
+        self.save_config()
+
+    def save_config(self):
+        # 保存配置到文件
+        conf_config_path = "conf/config.json"
+        with open(conf_config_path, 'w') as f:
+            json.dump(self.config, f, indent=4)    
+
 # 使用配置管理器
 # config_manager = ConfigManager.get_instance()
 # db_config = config_manager.database_config

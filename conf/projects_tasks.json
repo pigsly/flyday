@@ -1,20 +1,21 @@
 {
-  "專案類": [
-    {"task": "專案建置設定", "hours": [1, 1], "priority": 1},
-    {"task": "GIT配置", "hours": [1, 1], "priority": 2},
-    {"task": "資料庫調整", "hours": [1, 4], "priority": 3},
-    {"task": "功能客製", "hours": [1, 16], "priority": 4},
-    {"task": "測試工作", "hours": [1, 4], "priority": 5},
-    {"task": "客戶測試回饋與討論", "hours": [1, 3], "priority": 6},
-    {"task": "連線配置與部署工作", "hours": [1, 1], "priority": 7}
+  "Project": [
+    {"task": "Project Setup Configuration", "hours": [1, 1], "priority": 1},
+    {"task": "GIT Configuration", "hours": [1, 1], "priority": 2},
+    {"task": "Database Adjustment", "hours": [1, 4], "priority": 3},
+    {"task": "Feature Customization", "hours": [1, 16], "priority": 4},
+    {"task": "Testing Work", "hours": [1, 4], "priority": 5},
+    {"task": "Customer Test Feedback and Discussion", "hours": [1, 3], "priority": 6},
+    {"task": "Connection Configuration and Deployment Work", "hours": [1, 1], "priority": 7}
   ],
-  "遠時維運類": [
-    {"task": "客戶溝通說明", "hours": [1, 2], "priority": 1}
+  "HouseCleanning": [
+    {"task": "Sweeping the floor", "hours": [1, 2], "priority": 1},
+    {"task": "mopping the floor", "hours": [1, 2], "priority": 1}
   ],
-  "維運類": [
-    {"task": "環境檢查", "hours": [1, 1], "priority": 1},
-    {"task": "監測訊息調查", "hours": [1, 1], "priority": 2},
-    {"task": "可疑資料比對", "hours": [1, 1], "priority": 3},
-    {"task": "客戶溝通說明", "hours": [1, 8], "priority": 4}
+  "Maintenance": [
+    {"task": "Environment Check", "hours": [1, 1], "priority": 1},
+    {"task": "Monitoring Message Investigation", "hours": [1, 1], "priority": 2},
+    {"task": "Suspicious Data Comparison", "hours": [1, 1], "priority": 3},
+    {"task": "Customer Communication Explanation", "hours": [1, 8], "priority": 4}
   ]
 }

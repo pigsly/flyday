@@ -71,6 +71,7 @@ def initialize_completed_tasks(input_csv_path):
 # Modified function to implement Alternating Approach on the project's total hours
 def generate_priority_work_schedule_with_total_hours_alternating(date, projects, task_categories, completed_tasks, output_csv_path,
                                                                 max_work_hours=8):
+    print(f"Alternating Approach start...")                                                                
     with open(output_csv_path, mode='w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(['Date', 'Project Name', 'Project ID', 'Task Name', 'Work Hours'])
@@ -79,24 +80,31 @@ def generate_priority_work_schedule_with_total_hours_alternating(date, projects,
 
         # Calculate median total hours for determining short-term and long-term projects
         median_total_hours = sorted([project['total_hours'] for project in projects])[len(projects) // 2]
+        print(f"median_total_hours: {median_total_hours} ")
 
         # Split projects into short-term and long-term
-        short_term_projects = [project for project in projects if project['total_hours'] <= median_total_hours]
-        long_term_projects = [project for project in projects if project['total_hours'] > median_total_hours]
+        short_term_projects = [project for project in projects if project['total_hours'] < median_total_hours]
+        long_term_projects = [project for project in projects if project['total_hours'] >= median_total_hours]
 
         # Sort projects within each category by their priority
         short_term_projects.sort(key=lambda x: x['priority'])
         long_term_projects.sort(key=lambda x: x['priority'])
 
         # Start with the higher priority projects (short-term)
-        alternating_flag = True
+        config_manager = ConfigManager.get_instance()
+        flyday_config = config_manager.flyday_config
+        alternating_flag = flyday_config.get("alternating_flag")
+        print(f"read alternating_flag: {alternating_flag}")
+        # 使用示例
 
         # Continue alternating until we run out of work hours or projects
         while (short_term_projects or long_term_projects) and remaining_work_hours > 0:
             current_project_list = short_term_projects if alternating_flag else long_term_projects
             if not current_project_list:
                 # If we've run out of projects in the current category, switch to the other
-                alternating_flag = not alternating_flag
+                alternating_flag = not alternating_flag 
+                config_manager.update_alternating_flag(alternating_flag)
+                print(f"alternating_flag updated: {alternating_flag}")               
                 continue
 
             project = current_project_list.pop(0)  # Take the first project from the sorted list
@@ -127,6 +135,9 @@ def generate_priority_work_schedule_with_total_hours_alternating(date, projects,
 
             # Toggle the flag for the next iteration to alternate
             alternating_flag = not alternating_flag
+            # 更新 alternating_flag
+            config_manager.update_alternating_flag(alternating_flag)
+            print(f"alternating_flag updated: {alternating_flag}")
 
         # Warning if work hours remain unassigned
         if remaining_work_hours > 0:
@@ -140,6 +151,7 @@ def generate_priority_work_schedule_with_total_hours_alternating(date, projects,
 
 def generate_priority_work_schedule_with_total_hours(date, projects, task_categories, completed_tasks, output_csv_path,
                                                      max_work_hours=8):
+    print(f"LongestJobFirst Approach start...")                                                                      
     with open(output_csv_path, mode='w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(['Date', 'Project Name', 'Project ID', 'Task Name', 'Work Hours'])
@@ -252,3 +264,58 @@ def append_csv_content(input_csv_path, output_csv_directory):
 
 # 使用範例
 append_csv_content(input_csv_path, 'csv/')
+
+
+with open(conf_projects_path, 'r', encoding='utf-8') as f:
+    projects = json.load(f)
+
+# Initialize completed_tasks dictionary
+completed_tasks = {}
+
+# Read completed tasks from the uploaded_work_schedule.csv file
+def read_completed_tasks_from_csv():
+    with open(input_csv_path, mode='r', newline='', encoding='utf-8') as f:
+        reader = csv.reader(f)
+        next(reader)  # Skip header row
+        for row in reader:
+            if len(row) == 0:  # Skip empty rows
+                    continue
+            date,  projectname, project_id, task_name, work_hours = row
+            if project_id not in completed_tasks:
+                completed_tasks[project_id] = []
+            completed_tasks[project_id].append({'task': task_name, 'hours': int(work_hours)})
+
+
+# Read completed tasks from the uploaded CSV file
+read_completed_tasks_from_csv() 
+
+# Function to update the priority of projects based on remaining_hours
+def update_priority_based_on_remaining_hours(projects, completed_tasks):
+    # Calculate remaining_hours for each project
+    for project_details in projects:
+        project_id = project_details['id']
+        remaining_hours = project_details['total_hours']
+        for task in completed_tasks.get(project_id, []):
+            remaining_hours -= task['hours']
+        project_details['remaining_hours'] = remaining_hours
+
+    # Sort the projects by remaining_hours in descending order
+    projects.sort(key=lambda x: x['remaining_hours'], reverse=True)
+
+    # Update the priority based on the sorted order
+    for i, project_details in enumerate(projects):
+        project_details['priority'] = i + 1
+
+    return projects
+
+
+
+# Assuming 'projects' and 'completed_tasks' are already defined and populated
+# Update the priority and sort the projects
+updated_projects = update_priority_based_on_remaining_hours(projects, completed_tasks)
+
+
+# Save the updated projects back to projects.json
+with open('conf/projects.json', 'w', encoding='utf-8') as f:
+    json.dump(updated_projects, f, ensure_ascii=False, indent=4)
+

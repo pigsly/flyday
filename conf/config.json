@@ -2,7 +2,7 @@
     "flyday": {
         "maxhours": 8,
         "//": "AlternatingApproach, LongestJobFirst",
-        "priority_method": "AlternatingApproach"
-        
+        "priority_method": "LongestJobFirst",
+        "alternating_flag": false
     }
 }
