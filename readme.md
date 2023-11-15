@@ -1,6 +1,6 @@
 # Flyday: Your Task Migration Assistant
 
-<img title="" src="file:///D:/REPO_PY/flyday/flyday.png" alt="Flyday Logo" width="130">
+<img title="" src="flyday.png" alt="Flyday Logo" width="130">
 
 Welcome to **Flyday**, an intuitive software inspired by the well-known database migration tool, **Flyway**. Just as Flyway manages and orchestrates your database migrations, Flyday ensures that your daily tasks are scheduled with precision and efficiency with CSV file.
 
