@@ -43,7 +43,7 @@ def print_remaining_hours():
         remaining_hours = project_details['total_hours']
         for task in completed_tasks.get(project_id, []):
             remaining_hours -= task['hours']
-        print(f"{project_id} ({project_details['name']})({project_details['priority']}) - 剩餘工時：{remaining_hours} 小時")
+        print(f"{project_id} ({project_details['name']})({project_details['priority']}) - remaining hours：{remaining_hours} H")
 
 
 def total_remaining_hours():
@@ -56,10 +56,21 @@ def total_remaining_hours():
         total_hours += remaining_hours
     return total_hours
 
+def total_projects_hours():
+    total_hours = 0
+    for project_details in projects:
+        project_id = project_details['id']
+        project_hours = project_details['total_hours']
+        total_hours += project_hours
+    return total_hours
+
 # Print remaining work hours for each project
 print_remaining_hours()
+tph = total_projects_hours()
+trh = total_remaining_hours()
+tuh = tph - trh
+print(f"**Total project hours: {tph} H, Total remaining project hours: {trh} H, Total used hours: {tuh} H**")
 
-print(f"**所有專案總剩餘工時：{total_remaining_hours()} 小時**")
 
 # Here follows the rest of your code
 # ... (your projects, project_tasks, initialize_csv, and generate_priority_work_schedule functions)

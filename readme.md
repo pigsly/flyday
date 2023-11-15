@@ -9,13 +9,29 @@ Welcome to **Flyday**, an intuitive software inspired by the well-known database
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
+  - [First Step, arrange your works this month.]
+  - [Second Step, Review Config]
   - [Commands](#commands)
 - [Contribute](#contribute)
 - [License](#license)
 
 ## Introduction
 
-Flyday takes its core philosophy from the concept of migrations in databases. The idea is to streamline the allocation of tasks, ensuring they're effectively prioritized and aptly distributed over time. The primary component of Flyday is the `migrate command`, which is the heart of this task migration system.
+Flyday uses the concept of database migrations to streamline task allocation. It prioritizes tasks and distributes them over time, allowing you to track your work hours and modify the schedule if necessary.
+
+Key Features:
+
+1. Uses CSV files for easy viewing and editing in office software.
+2. Flyway-like command management for ease of use.
+3. Extensible priority algorithms.
+
+Flyday 從資料庫遷移的概念中汲取其核心理念。其目的是簡化任務分配，確保任務得到有效的優先排序並適當地分佈在時間上。使用 Flyday 可以指導您撰寫每日的工作記錄，並清晰地了解該月的工時結構。如果指導生成的每日工作記錄不適合，您也可以方便地手動修改 history/Schedule.csv。
+
+其設計的核心要點包括：
+
+1. 使用 CSV 檔案作為存儲容器，方便用 Office 軟件查看工作結果。
+2. 使用類似 Flyway 的管理指令，只要您熟悉 Flyway 就能快速上手。
+3. 優先權算法可以擴充。
 
 ## Installation
 
@@ -40,13 +56,22 @@ Flyday takes its core philosophy from the concept of migrations in databases. Th
    python setup.py install
    ```
 
-## Config
+## First Step, arrange your works this month.
 
 1. conf/ projects.json 
    You must give the planed projects this month. flyday will assign the tasks for a day.
 
 2. conf/ project_tasks.json   
    You can defind the type of project, each type owns the specfic tasks. The task can also defind available spending hours.
+
+## Second Step, Review Config.
+In conf/config.json:
+
+- priority_method: Provides two priority algorithms. The first is the LongestJobFirst algorithm, where projects with longer work hours have higher priority. The second is the AlternatingApproach algorithm, which alternates between sets of projects with longer and shorter work hours to generate daily tasks. This ensures that longer tasks are not delayed for too long, making it suitable for months with unforeseen leave or absences. The default setting is AlternatingApproach.
+
+- maxhours: The number of work hours in a day, expressed as a positive integer.
+
+- alternating_flag: True or False, used for recording purposes.
 
 ## Usage
 
@@ -87,7 +112,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## License
 
-Distributed under the MIT License. See [LICENSE.md](LICENSE.md) for more information.
+Distributed under the Apache License. 
 
 ---
 

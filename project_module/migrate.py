@@ -229,6 +229,7 @@ completed_tasks = initialize_completed_tasks(input_csv_path)
 # 調用對應的方法
 if priority_method_name in priority_methods:
     priority_methods[priority_method_name](sample_date, projects, task_categories, completed_tasks, output_csv_path, max_work_hours)
+    print(f"check your schedule (history/Schedule.csv)!!")
 else:
     print(f"Unknown priority method: {priority_method_name}")
 
