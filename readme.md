@@ -81,29 +81,24 @@ After installation, you can use the provided commands to manage your tasks.
 
 1. **migrate**  
    Use this command to generate your priority-based work schedule.
-
+```
 flyday migrate
-
+```
 2. **info**  
    Provides an overview of the current state of your work schedule.
-
+```
 flyday info
-
+```
 3. **repair**  
    In case of any discrepancies in your task schedule, use this command to rearrange the priority of projects.json. The priority will change depending on the  remaining_hours.
-
+```
 flyday repair
-
-4. **clean**  
-   Removes all tasks from the current schedule, giving you a clean slate.
-
-flyday clean
-
-5. **undo**  
+```
+4. **undo**  
    Reverts the last task migration, in case you wish to backtrack the Schedule.csv and backup a new Schedule_bak.csv
-
+```
 flyday undo
-
+```
 Remember, just as migrations in databases, once you've established a routine with Flyday, make it a habit to check your task schedule regularly using the `info` command, and `migrate` your task to your Schedule.csv.
 
 ## Contribute
@@ -118,6 +113,4 @@ Distributed under the Apache License.
 
 Happy task migrating with **Flyday**! If you find this tool useful, please consider giving it a star on GitHub! ✨
 
-```
 
-```
