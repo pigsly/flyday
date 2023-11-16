@@ -16,8 +16,9 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install PyInstaller
-      run: pip install pyinstaller
+    - name: Install cx_Freeze
+      run: pip install cx_Freeze
+
 
     - name: Build Executable
       run: python setup.py build
