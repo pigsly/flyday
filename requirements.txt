@@ -1,0 +1,10 @@
+cx-Freeze==6.13.2
+cx-Logging==3.1.0
+DateTime==5.2
+importlib-metadata==6.7.0
+lief==0.12.3
+packaging==23.2
+pytz==2023.3.post1
+typing_extensions==4.7.1
+zipp==3.15.0
+zope.interface==6.1
