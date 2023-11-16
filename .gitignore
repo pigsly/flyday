@@ -5,3 +5,4 @@ venv/
 requirements.txt
 *_bak.*
 *_backup.*
+.gitconfig
