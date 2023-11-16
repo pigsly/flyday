@@ -1,5 +1,4 @@
 .DS_Store
-build/
 venv/
 *.pyc
 *_bak.*
