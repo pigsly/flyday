@@ -24,7 +24,8 @@ setup(
     executables=executables,
     options={
         'build_exe': {            
-            'include_files':includefiles
+            'include_files':includefiles,
+            'build_exe': 'dist/'  # 指定构建输出的路径
         }
     }
 )
