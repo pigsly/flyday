@@ -1,8 +1,8 @@
 # Flyday: Your Task Migration Assistant
 
-[![flyday Release](https://github.com/pigsly/flyday/actions/workflows/release.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/release.yml)[中文版本](/readme.zh.md)
+[![flyday Release](https://github.com/pigsly/flyday/actions/workflows/release.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/release.yml)
 
-<img title="" src="flyday.png" alt="Flyday Logo" width="130">
+<img title="" src="flyday.png" alt="Flyday Logo" width="130"> [中文版本](/readme.zh.md)
 
 Welcome to **Flyday**, activating Creative Energy-Saving Mode: Reduce daily reporting stress, unleash creativity, an intuitive software inspired by the well-known database migration tool, **Flyway**. Just as Flyway manages and orchestrates your database migrations, Flyday ensures that your daily tasks are scheduled with precision and efficiency with CSV file.
 
