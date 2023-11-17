@@ -37,8 +37,8 @@ jobs:
 
     - name: Zip the Build
       run: |
-        zip -r Flyday.zip dist/flyday
-        #D:\a\flyday\flyday\dist\flyday 
+        Compress-Archive -Path dist/flyday -DestinationPath Flyday.zip
+
       
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
