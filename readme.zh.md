@@ -1,5 +1,5 @@
 # Flyday: 任務遷移助手 
-[English Version](README.md)
+[![flyday Release](https://github.com/pigsly/flyday/actions/workflows/release.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/release.yml)[English Version](/readme.md)
 
 <img title="" src="flyday.png" alt="Flyday Logo" width="130">
 

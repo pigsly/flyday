@@ -1,6 +1,6 @@
 # Flyday: Your Task Migration Assistant
 
-[中文版本](/readme.zh.md)
+[![flyday Release](https://github.com/pigsly/flyday/actions/workflows/release.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/release.yml)[中文版本](/readme.zh.md)
 
 <img title="" src="flyday.png" alt="Flyday Logo" width="130">
 
