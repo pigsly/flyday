@@ -1,6 +1,6 @@
 # Flyday: Your Task Migration Assistant
 
-[中文版本](README.zh.md)
+[中文版本](flyday/README.zh.md)
 
 <img title="" src="flyday.png" alt="Flyday Logo" width="130">
 
