@@ -2,7 +2,7 @@
 
 [![flyday Release](https://github.com/pigsly/flyday/actions/workflows/release.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/release.yml)
 
-<img title="" src="flyday.png" alt="Flyday Logo" width="130"> [中文版本](/readme.zh.md)
+<img title="" src="flyday_small.png" alt="Flyday Logo"> [中文版本](/readme.zh.md)
 
 Welcome to **Flyday**, activating Creative Energy-Saving Mode: Reduce daily reporting stress, unleash creativity, an intuitive software inspired by the well-known database migration tool, **Flyway**. Just as Flyway manages and orchestrates your database migrations, Flyday ensures that your daily tasks are scheduled with precision and efficiency with CSV file.
 
@@ -31,7 +31,7 @@ Key Features:
 
 Sample output:
 
-<img title="" src="info_sample.png" alt="info_sample" width="100%">
+<img title="" src="info_sample_en.png" alt="info_sample" width="100%">
 
 ## Installation
 

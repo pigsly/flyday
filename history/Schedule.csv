@@ -1,13 +1,13 @@
 DATE,PROJECTNAME,ID,WORK_DESCRIPTION,HOURS
-11/14,ABC ERP維護專案,ABC230073_01,Environment Check,1
-11/14,ABC ERP維護專案,ABC230073_01,Monitoring Message Investigation,1
-11/14,ABC ERP維護專案,ABC230073_01,Suspicious Data Comparison,1
-11/14,CDE 會員模組加入董監事、採購員,CDE230466_01,Project Setup Configuration,1
-11/14,CDE 會員模組加入董監事、採購員,CDE230466_01,GIT Configuration,1
-11/14,CDE 會員模組加入董監事、採購員,CDE230466_01,Feature Customization,1
-11/14,CDE 會員模組加入董監事、採購員,CDE230466_01,Connection Configuration and Deployment Work,1
-11/14,辦公區清潔專案,HHH220350_01,Sweeping the floor,1
+11/14,ABC ERP MA,ABC230073_01,Environment Check,1
+11/14,ABC ERP MA,ABC230073_01,Monitoring Message Investigation,1
+11/14,ABC ERP MA,ABC230073_01,Suspicious Data Comparison,1
+11/14,CDE Member Modal Design,CDE230466_01,Project Setup Configuration,1
+11/14,CDE Member Modal Design,CDE230466_01,GIT Configuration,1
+11/14,CDE Member Modal Design,CDE230466_01,Feature Customization,1
+11/14,CDE Member Modal Design,CDE230466_01,Connection Configuration and Deployment Work,1
+11/14,Office Area Cleanning,HHH220350_01,Sweeping the floor,1
 
-11/15,CDE 會員模組加入董監事、採購員,CDE230466_01,Database Adjustment,4
-11/15,CDE 會員模組加入董監事、採購員,CDE230466_01,Testing Work,1
-11/15,CDE 會員模組加入董監事、採購員,CDE230466_01,Customer Test Feedback and Discussion,3
+11/15,CDE Member Modal Design,CDE230466_01,Database Adjustment,4
+11/15,CDE Member Modal Design,CDE230466_01,Testing Work,1
+11/15,CDE Member Modal Design,CDE230466_01,Customer Test Feedback and Discussion,3

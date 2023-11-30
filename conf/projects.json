@@ -1,7 +1,7 @@
 [
     {
         "id": "XYZ230012_01",
-        "name": "XYZ 中獎訊息調整",
+        "name": "XYZ Adjustment of Winning Notification",
         "type": "Project",
         "total_hours": 30,
         "priority": 1,
@@ -9,7 +9,7 @@
     },
     {
         "id": "CDE230466_01",
-        "name": "CDE 會員模組加入董監事、採購員",
+        "name": "CDE Member Modal Design",
         "type": "Project",
         "total_hours": 40,
         "priority": 2,
@@ -17,7 +17,7 @@
     },
     {
         "id": "XYZ230012_02",
-        "name": "XYZ 開獎訊息調整",
+        "name": "XYZ Adjustment of Lottery Drawing Announcement",
         "type": "Project",
         "total_hours": 20,
         "priority": 3,
@@ -25,7 +25,7 @@
     },
     {
         "id": "CDE230466_02",
-        "name": "CDE 報表模組加入董監事、採購員",
+        "name": "CDE Report Modal Design",
         "type": "Project",
         "total_hours": 20,
         "priority": 4,
@@ -33,7 +33,7 @@
     },
     {
         "id": "ABC230073_01",
-        "name": "ABC ERP維護專案",
+        "name": "ABC ERP MA",
         "type": "Maintenance",
         "total_hours": 8,
         "priority": 5,
@@ -41,7 +41,7 @@
     },
     {
         "id": "HHH220350_01",
-        "name": "辦公區清潔專案",
+        "name": "Office Area Cleanning",
         "type": "HouseCleanning",
         "total_hours": 2,
         "priority": 6,

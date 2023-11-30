@@ -1,7 +1,7 @@
 # Flyday: 任務遷移助手 
 [![flyday Release](https://github.com/pigsly/flyday/actions/workflows/release.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/release.yml)
 
-<img title="" src="flyday.png" alt="Flyday Logo" width="130"/> [English Version](/readme.md)
+<img title="" src="flyday_small.png" alt="Flyday Logo"/> [English Version](/readme.md)
 
 歡迎來到 **Flyday**，啟動創意節能模式：減壓報每日工時，釋放創造力！，一款靈感來自著名的數據庫遷移工具 **Flyway** 的直觀軟件。就像 Flyway 管理和協調您的數據庫遷移一樣，Flyday 確保您的日常任務能夠通過 CSV 文件精確且高效地進行每日工作排程。
 
@@ -28,7 +28,7 @@ Flyday 從數據庫遷移的概念中汲取靈感，用於精簡任務分配。�
 
 輸出展示：
 
-<img title="" src="info_sample.png" alt="info_sample" width="100%">
+<img title="" src="info_sample_zh.png" alt="info_sample" width="100%">
 
 ## 安裝
 
