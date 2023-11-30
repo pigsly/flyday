@@ -27,6 +27,12 @@ Key Features:
 2. Flyway-like command management for ease of use.
 3. Extensible priority algorithms.
 
+
+
+Sample output:
+
+<img title="" src="info_sample.png" alt="info_sample" width="100%">
+
 ## Installation
 
 1. Clone the repository:
@@ -87,13 +93,14 @@ After installation, you can use the provided commands to manage your tasks.
    ```
    info
    ```
-   
+
 3. **repair**  
    In case of any discrepancies in your task schedule, use this command to rearrange the priority of projects.json. The priority will change depending on the  remaining_hours.
    
    ```
    repair
    ```
+
 4. **undo**  
    Reverts the last task migration, in case you wish to backtrack the Schedule.csv and backup a new Schedule_bak.csv
    

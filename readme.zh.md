@@ -26,6 +26,10 @@ Flyday 從數據庫遷移的概念中汲取靈感，用於精簡任務分配。�
 2. 類似 Flyway 的命令管理，易於使用。
 3. 可擴展的優先級算法。
 
+輸出展示：
+
+<img title="" src="info_sample.png" alt="info_sample" width="100%">
+
 ## 安裝
 
 1. 克隆倉庫：git clone <倉庫地址>

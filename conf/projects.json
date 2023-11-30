@@ -1,6 +1,6 @@
 [
     {
-        "id": "P20230012_01",
+        "id": "XYZ230012_01",
         "name": "XYZ 中獎訊息調整",
         "type": "Project",
         "total_hours": 30,
@@ -8,7 +8,7 @@
         "remaining_hours": 30
     },
     {
-        "id": "N20230466_01",
+        "id": "CDE230466_01",
         "name": "CDE 會員模組加入董監事、採購員",
         "type": "Project",
         "total_hours": 40,
@@ -16,7 +16,7 @@
         "remaining_hours": 28
     },
     {
-        "id": "P20230012_02",
+        "id": "XYZ230012_02",
         "name": "XYZ 開獎訊息調整",
         "type": "Project",
         "total_hours": 20,
@@ -24,7 +24,7 @@
         "remaining_hours": 20
     },
     {
-        "id": "N20230466_02",
+        "id": "CDE230466_02",
         "name": "CDE 報表模組加入董監事、採購員",
         "type": "Project",
         "total_hours": 20,
@@ -32,7 +32,7 @@
         "remaining_hours": 20
     },
     {
-        "id": "P20230073_01",
+        "id": "ABC230073_01",
         "name": "ABC ERP維護專案",
         "type": "Maintenance",
         "total_hours": 8,
@@ -40,7 +40,7 @@
         "remaining_hours": 5
     },
     {
-        "id": "P20220350_01",
+        "id": "HHH220350_01",
         "name": "辦公區清潔專案",
         "type": "HouseCleanning",
         "total_hours": 2,
