@@ -12,8 +12,10 @@ executables = [
 includefiles = [
     ('conf/projects.json','conf/projects.json'), 
     ('conf/projects_tasks.json','conf/projects_tasks.json'),
+    ('conf/config.json','conf/config.json'),
     ('csv/V20231114153243__DAY.csv','csv/V20231114153243__DAY.csv'),
-    ('history/Schedule.csv','history/Schedule.csv')
+    ('history/Schedule.csv','history/Schedule.csv'),
+    ('project_module/ConfigManager.py', 'project_module/ConfigManager.py')
 ]
 
 
@@ -25,6 +27,7 @@ setup(
     options={
         'build_exe': {            
             'include_files':includefiles,
+            # 'packages': ['ConfigManager'],  # 包含 ConfigManager 模塊
             'build_exe': 'dist/flyday/'  # 指定构建输出的路径
         }
     }

@@ -4,7 +4,7 @@ import random
 import datetime
 import json
 import os
-from ConfigManager import ConfigManager
+from project_module.ConfigManager import ConfigManager
 # import mig2
 
 conf_config_path = "conf/config.json"
