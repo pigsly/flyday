@@ -1,35 +1,35 @@
 [
     {
-        "id": "XYZ230012_01",
-        "name": "XYZ Adjustment of Winning Notification",
+        "id": "CDE230466_02",
+        "name": "CDE Report Modal Design",
         "type": "Project",
-        "total_hours": 30,
+        "total_hours": 20,
         "priority": 1,
-        "remaining_hours": 30
-    },
-    {
-        "id": "CDE230466_01",
-        "name": "CDE Member Modal Design",
-        "type": "Project",
-        "total_hours": 40,
-        "priority": 2,
-        "remaining_hours": 28
+        "remaining_hours": 0
     },
     {
         "id": "XYZ230012_02",
         "name": "XYZ Adjustment of Lottery Drawing Announcement",
         "type": "Project",
         "total_hours": 20,
-        "priority": 3,
-        "remaining_hours": 20
+        "priority": 2,
+        "remaining_hours": 0
     },
     {
-        "id": "CDE230466_02",
-        "name": "CDE Report Modal Design",
+        "id": "XYZ230012_01",
+        "name": "XYZ Adjustment of Winning Notification",
         "type": "Project",
-        "total_hours": 20,
+        "total_hours": 30,
+        "priority": 3,
+        "remaining_hours": 0
+    },
+    {
+        "id": "CDE230466_01",
+        "name": "CDE Member Modal Design",
+        "type": "Project",
+        "total_hours": 40,
         "priority": 4,
-        "remaining_hours": 20
+        "remaining_hours": 0
     },
     {
         "id": "ABC230073_01",
@@ -37,7 +37,7 @@
         "type": "Maintenance",
         "total_hours": 8,
         "priority": 5,
-        "remaining_hours": 5
+        "remaining_hours": 0
     },
     {
         "id": "HHH220350_01",
@@ -45,6 +45,6 @@
         "type": "HouseCleanning",
         "total_hours": 2,
         "priority": 6,
-        "remaining_hours": 1
+        "remaining_hours": 0
     }
 ]
