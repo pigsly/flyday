@@ -1,48 +1,48 @@
-# Flyday: 任務遷移助手 
+# Flyday: 智能工时调度师 
 [![flyday Release](https://github.com/pigsly/flyday/actions/workflows/release.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/release.yml)
 
 <img title="" src="flyday_small.png" alt="Flyday Logo"/> [English Version](/readme.md)
 
-歡迎來到 **Flyday**，啟動創意節能模式：減壓報每日工時，釋放創造力！，一款靈感來自著名的數據庫遷移工具 **Flyway** 的直觀軟件。就像 Flyway 管理和協調您的數據庫遷移一樣，Flyday 確保您的日常任務能夠通過 CSV 文件精確且高效地進行每日工作排程。
+欢迎来到 **Flyday**，智能工时调度师：减压报每日工时，释放创造力！，一款灵感来自着名的数据库迁移工具 **Flyway** 的直观软件。就像 Flyway 管理和协调您的数据库迁移一样，Flyday 确保您的日常任务能够通过 CSV 文件精确且高效地进行每日工作排程。
 
-## 目錄
+## 目录
 
-- [介紹](#介紹)
-- [安裝](#安裝)
+- [介绍](#介绍)
+- [安装](#安装)
 - [使用方法](#使用方法)
   - [第一步，安排本月工作。](#第一步)
-  - [第二步，審查配置](#第二步)
+  - [第二步，审查配置](#第二步)
   - [指令](#指令)
-- [貢獻](#貢獻)
-- [許可證](#許可證)
+- [贡献](#贡献)
+- [许可证](#许可证)
 
-## 介紹
+## 介绍
 
-Flyday 從數據庫遷移的概念中汲取靈感，用於精簡任務分配。它優先排序任務並在時間上分佈，讓您跟蹤工作時數並在必要時調整日程。
+Flyday 从数据库迁移的概念中汲取灵感，用于精简任务分配。它优先排序任务并在时间上分佈，让您跟踪工作时数并在必要时调整日程。
 
 核心功能：
 
-1. 使用 CSV 文件，便於在辦公軟件中查看和編輯。
-2. 類似 Flyway 的命令管理，易於使用。
-3. 可擴展的優先級算法。
+1. 使用 CSV 文件，便于在办公软件中查看和编辑。
+2. 类似 Flyway 的命令管理，易于使用。
+3. 可扩展的优先级算法。
 
-輸出展示：
+输出展示：
 
 <img title="" src="info_sample_zh.png" alt="info_sample" width="100%">
 
-## 安裝
+## 安装
 
-1. 克隆倉庫：git clone <倉庫地址>
-2. 創建虛擬環境：
+1. 克隆仓库：git clone <仓库地址>
+2. 创建虚拟环境：
 ```bash
 virtualenv venv
 .\venv\Scripts\activate
 ```
-3. 安裝所需依賴：
+3. 安装所需依赖：
 ```bash
 pip install -r requirements.txt
 ```
-4. 運行設置腳本（如果有）：
+4. 运行设置脚本（如果有）：
 ```bash
 python setup.py install
 ```
@@ -50,55 +50,55 @@ python setup.py install
 ## 第一步
 
 - conf/ projects.json
-您需要提供本月計劃的項目，Flyday 將為您安排每天的任務。
+您需要提供本月计划的项目，Flyday 将为您安排每天的任务。
 
 - conf/ project_tasks.json
-您可以定義項目類型，每種類型包含特定的任務。任務可以定義可用的工作時數。
+您可以定义项目类型，每种类型包含特定的任务。任务可以定义可用的工作时数。
 
 ## 第二步
 
 在 conf/config.json 中:
 
-- priority_method: 提供兩種優先級算法。第一種是 LongestJobFirst，工時較長的項目具有更高的優先級。第二種是 AlternatingApproach，交替處理工時長短不一的項目集，以生成每日任務。這確保短期任務不會被過度延遲，適用於有突發休假或缺席的月份。默認設置為 AlternatingApproach。
+- priority_method: 提供两种优先级算法。第一种是 LongestJobFirst，工时较长的项目具有更高的优先级。第二种是 AlternatingApproach，交替处理工时长短不一的项目集，以生成每日任务。这确保短期任务不会被过度延迟，适用于有突发休假或缺席的月份。默认设置为 AlternatingApproach。
 
-- maxhours: 一天中的工作時數，以正整數表示。
+- maxhours: 一天中的工作时数，以正整数表示。
 
-- alternating_flag: 為 True 或 False，用於記錄目的。
+- alternating_flag: 为 True 或 False，用于记录目的。
 
 ## 使用方法
 
-安裝後，您可以使用提供的指令來管理您的任務。
+安装后，您可以使用提供的指令来管理您的任务。
 
 指令
 
 - migrate
-使用此指令生成基於每日優先級的工作計劃。
+使用此指令生成基于每日优先级的工作计划。
 
 ```bash
 migrate
 ```
 
 - info
-提供工作計劃的當前狀態概覽。
+提供工作计划的当前状态概览。
 
 ```bash
 info
 ```
 
 - repair
-如發現任務計劃有差異，使用此指令重新安排 projects.json 中的優先級。優先級將根據 remaining_hours 進行調整。
+如发现任务计划有差异，使用此指令重新安排 projects.json 中的优先级。优先级将根据 remaining_hours 进行调整。
 
 ```bash
 repair
 ```
 
 - undo
-如果您想回退 Schedule.csv，並備份新的 Schedule_bak.csv，使用此指令撤銷上一次任務遷移。
+如果您想回退 Schedule.csv，并备份新的 Schedule_bak.csv，使用此指令撤销上一次任务迁移。
 
 ```bash
 undo
 ```
 
-## 許可證
+## 许可证
 
-根據 Apache License 分發。
+根据 Apache License 分发。

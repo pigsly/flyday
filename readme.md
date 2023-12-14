@@ -1,10 +1,10 @@
-# Flyday: Your Task Migration Assistant
+# Flyday: Intelligent Efficient Work Hour Planner
 
 [![flyday Release](https://github.com/pigsly/flyday/actions/workflows/release.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/release.yml)
 
 <img title="" src="flyday_small.png" alt="Flyday Logo"> [中文版本](/readme.zh.md)
 
-Welcome to **Flyday**, activating Creative Energy-Saving Mode: Reduce daily reporting stress, unleash creativity, an intuitive software inspired by the well-known database migration tool, **Flyway**. Just as Flyway manages and orchestrates your database migrations, Flyday ensures that your daily tasks are scheduled with precision and efficiency with CSV file.
+Welcome to Flyday, your Intelligent Efficient Work Hour Planner. Activating Creative Energy-Saving Mode, this tool is designed to reduce daily reporting stress and unleash creativity. Inspired by the well-known database migration tool, Flyway, Flyday is just as adept at managing and orchestrating your daily tasks. With its precision scheduling and efficiency, facilitated through CSV file integration, Flyday ensures that every hour of your workday is optimized for maximum productivity and creative output.
 
 ## Table of Contents
 
