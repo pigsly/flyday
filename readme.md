@@ -1,6 +1,7 @@
 # Flyday: Intelligent Efficient Work Hour Planner
 
 [![flyday Release](https://github.com/pigsly/flyday/actions/workflows/release.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/release.yml)
+[![CodeQL](https://github.com/pigsly/flyday/actions/workflows/codeql.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/codeql.yml)
 
 <img title="" src="flyday_small.png" alt="Flyday Logo"> [中文版本](/readme.zh.md)
 

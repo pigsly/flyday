@@ -1,5 +1,6 @@
 # Flyday: 智能工时调度师 
 [![flyday Release](https://github.com/pigsly/flyday/actions/workflows/release.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/release.yml)
+[![CodeQL](https://github.com/pigsly/flyday/actions/workflows/codeql.yml/badge.svg)](https://github.com/pigsly/flyday/actions/workflows/codeql.yml)
 
 <img title="" src="flyday_small.png" alt="Flyday Logo"/> [English Version](/readme.md)
 
