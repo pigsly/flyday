@@ -43,7 +43,7 @@ def print_remaining_hours():
         remaining_hours = project_details['total_hours']
         for task in completed_tasks.get(project_id, []):
             remaining_hours -= task['hours']
-        print(f"{project_id} ({project_details['name']})({project_details['priority']}) - remaining hours：{remaining_hours} H")
+        print(f"{project_id} ({project_details['name']}: {project_details['total_hours']} H) - remaining hours：{remaining_hours} H")
 
 
 def total_remaining_hours():

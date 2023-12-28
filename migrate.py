@@ -65,7 +65,7 @@ def generate_priority_work_schedule_with_total_hours_alternating(date, pm, task_
 
         # Calculate median total hours for determining short-term and long-term projects
         median_total_hours = sorted([project['total_hours'] for project in pm.projects])[len(pm.projects) // 2]
-        print(f"median_total_hours: {median_total_hours} ")
+        # print(f"median_total_hours: {median_total_hours} ")
 
         # Split projects into short-term and long-term
         short_term_projects = [project for project in pm.projects if project['total_hours'] < median_total_hours and project['remaining_hours'] > 0]
@@ -79,9 +79,8 @@ def generate_priority_work_schedule_with_total_hours_alternating(date, pm, task_
         config_pm = ConfigManager.get_instance()
         flyday_config = config_pm.flyday_config
         alternating_flag = flyday_config.get("alternating_flag")
-        print(f"read alternating_flag: {alternating_flag}")
-        # 使用示例
-
+        # print(f"read alternating_flag: {alternating_flag}")
+        
         # Continue alternating until we run out of work hours or projects
         while (short_term_projects or long_term_projects) and remaining_work_hours > 0:
             current_project_list = short_term_projects if alternating_flag else long_term_projects
@@ -89,7 +88,7 @@ def generate_priority_work_schedule_with_total_hours_alternating(date, pm, task_
                 # If we've run out of projects in the current category, switch to the other
                 alternating_flag = not alternating_flag 
                 config_pm.update_alternating_flag(alternating_flag)
-                print(f"alternating_flag updated: {alternating_flag}")               
+                # print(f"alternating_flag updated: {alternating_flag}")               
                 continue
 
             project = current_project_list.pop(0)  # Take the first project from the sorted list
@@ -135,7 +134,7 @@ def generate_priority_work_schedule_with_total_hours_alternating(date, pm, task_
             alternating_flag = not alternating_flag
             # 更新 alternating_flag
             config_pm.update_alternating_flag(alternating_flag)
-            print(f"alternating_flag updated: {alternating_flag}")
+            # print(f"alternating_flag updated: {alternating_flag}")
             
 
         # Warning if work hours remain unassigned
@@ -261,8 +260,9 @@ def append_csv_content(input_csv_path, output_csv_directory):
             next(reader)  # 跳過第一行
             for row in reader:
                 writer.writerow(row)
+                print(row)
 
-# 使用範例
+print("Suggested Tasks:")
 append_csv_content(input_csv_path, 'csv/')
 
 
