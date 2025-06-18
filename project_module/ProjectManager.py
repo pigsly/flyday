@@ -25,9 +25,9 @@ class ProjectManager:
                     continue
                 date, project_name, project_id, task_name, work_hours = row
                 if project_id not in self.completed_tasks:
-                    self.completed_tasks[project_id] = {'tasks': [], 'total_hours': 0}
+                    self.completed_tasks[project_id] = {'tasks': [], 'total_hours': 0.0}
                 self.completed_tasks[project_id]['tasks'].append(task_name)
-                self.completed_tasks[project_id]['total_hours'] += int(work_hours)
+                self.completed_tasks[project_id]['total_hours'] += float(work_hours)
     
     # 這是演算法處理期間可運用的method     
     def update_priority_based_on_remaining_hours(self):
@@ -35,7 +35,7 @@ class ProjectManager:
             project_id = project_details['id']
             remaining_hours = project_details['total_hours']
             # 检索项目的已完成任务和总工时
-            project_tasks = self.completed_tasks.get(project_id, {'tasks': [], 'total_hours': 0})
+            project_tasks = self.completed_tasks.get(project_id, {'tasks': [], 'total_hours': 0.0})
             task_hours = project_tasks['total_hours']
             remaining_hours -= task_hours
             project_details['remaining_hours'] = remaining_hours

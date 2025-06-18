@@ -71,7 +71,7 @@ In conf/config.json:
 
 - priority_method: Provides two priority algorithms. The first is the LongestJobFirst algorithm, where projects with longer work hours have higher priority. The second is the AlternatingApproach algorithm, which alternates between sets of projects with longer and shorter work hours to generate daily tasks. This ensures that shorter tasks are not delayed for too long, making it suitable for months with unforeseen leave or absences. The default setting is AlternatingApproach.
 
-- maxhours: The number of work hours in a day, expressed as a positive integer.
+- maxhours: The number of work hours in a day, expressed as a positive number (half-hour increments like `3.5` are supported).
 
 - alternating_flag: True or False, used for recording purposes.
 
