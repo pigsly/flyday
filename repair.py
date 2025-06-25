@@ -22,7 +22,7 @@ def read_completed_tasks_from_csv():
             date,  projectname, project_id, task_name, work_hours = row
             if project_id not in completed_tasks:
                 completed_tasks[project_id] = []
-            completed_tasks[project_id].append({'task': task_name, 'hours': int(work_hours)})
+            completed_tasks[project_id].append({'task': task_name, 'hours': float(work_hours)})
 
 
 # Read completed tasks from the uploaded CSV file

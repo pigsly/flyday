@@ -22,7 +22,7 @@ def read_completed_tasks_from_csv():
             date,  projectname, project_id, task_name, work_hours = row
             if project_id not in completed_tasks:
                 completed_tasks[project_id] = []
-            completed_tasks[project_id].append({'task': task_name, 'hours': int(work_hours)})
+            completed_tasks[project_id].append({'task': task_name, 'hours': float(work_hours)})
 
 
 # Read completed tasks from the uploaded CSV file
@@ -47,7 +47,7 @@ def print_remaining_hours():
 
 
 def total_remaining_hours():
-    total_hours = 0
+    total_hours = 0.0
     for project_details in projects:
         project_id = project_details['id']
         remaining_hours = project_details['total_hours']
@@ -57,7 +57,7 @@ def total_remaining_hours():
     return total_hours
 
 def total_projects_hours():
-    total_hours = 0
+    total_hours = 0.0
     for project_details in projects:
         project_id = project_details['id']
         project_hours = project_details['total_hours']

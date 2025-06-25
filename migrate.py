@@ -115,10 +115,10 @@ def generate_priority_work_schedule_with_total_hours_alternating(date, pm, task_
 
                 # Check if the task fits into the remaining work hours
                 if remaining_work_hours - task_hours >= 0:
-                    writer.writerow([date, project['name'], project_id, task['task'], task_hours])
+                    writer.writerow([date, project['name'], project_id, task['task'], f"{task_hours:.1f}"])
                     remaining_work_hours -= task_hours
                     if project_id not in pm.completed_tasks:
-                        pm.completed_tasks[project_id] = {'tasks': [], 'total_hours': 0}
+                        pm.completed_tasks[project_id] = {'tasks': [], 'total_hours': 0.0}
                     pm.completed_tasks[project_id]['tasks'].append(task['task'])
                     pm.completed_tasks[project_id]['total_hours'] += task_hours
     
@@ -180,8 +180,8 @@ def generate_priority_work_schedule_with_total_hours(date, pm, task_categories, 
                 # Skip tasks that exceed the project's total work hours
                 if existing_total_hours + task_hours > project_details['total_hours']:
                     continue
-                # write to works to output_csv_path    
-                writer.writerow([date, project_details['name'], project_id, task['task'], task_hours])
+                # write to works to output_csv_path
+                writer.writerow([date, project_details['name'], project_id, task['task'], f"{task_hours:.1f}"])
                 # print(f"{project_details['name']}, {project_id}, {task['task']}, {task_hours}")
                 # Update remaining work hours for the day
                 remaining_work_hours -= task_hours
@@ -190,7 +190,7 @@ def generate_priority_work_schedule_with_total_hours(date, pm, task_categories, 
                 # print(f"remaining_work_hours: {remaining_work_hours}, existing_total_hours: {existing_total_hours} ")
                 
                 if project_id not in pm.completed_tasks:
-                    pm.completed_tasks[project_id] = {'tasks': [], 'total_hours': 0}
+                    pm.completed_tasks[project_id] = {'tasks': [], 'total_hours': 0.0}
                 pm.completed_tasks[project_id]['tasks'].append(task['task'])
                 pm.completed_tasks[project_id]['total_hours'] += task_hours
     if(remaining_work_hours > 0 and max_work_hours > remaining_work_hours):

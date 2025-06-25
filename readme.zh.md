@@ -62,7 +62,7 @@ python setup.py install
 
 - priority_method: 提供两种优先级算法。第一种是 LongestJobFirst，工时较长的项目具有更高的优先级。第二种是 AlternatingApproach，交替处理工时长短不一的项目集，以生成每日任务。这确保短期任务不会被过度延迟，适用于有突发休假或缺席的月份。默认设置为 AlternatingApproach。
 
-- maxhours: 一天中的工作时数，以正整数表示。
+- maxhours: 一天中的工作时数，以正数表示，可支援半小时（例如 `3.5`）。
 
 - alternating_flag: 为 True 或 False，用于记录目的。
 
